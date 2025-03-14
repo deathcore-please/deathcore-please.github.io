@@ -131,13 +131,20 @@ function BootSequence()
     OutputsText = "";
     let LoadingChars = ["-", "\\", "|", "/"];
 
-    if (Time > 0.1) {OutputsText += " █████╗██╗ ██╗ ████╗ █████╗ ██╗    ██╗██████╗    ████╗ \n";}
-    if (Time > 0.2) {OutputsText += "██╔═══╝██║ ██║██╔═██╗██╔═██╗██║    ██║██╔═══╝   ██╔═██╗\n";}
-    if (Time > 0.3) {OutputsText += "██║    ██████║██████║█████╔╝██║    ██║█████╗    ██████║\n";}
-    if (Time > 0.4) {OutputsText += "██║    ██╔═██║██╔═██║██╔═██╗██║    ██║██╔══╝    ██╔═██║\n";}
-    if (Time > 0.5) {OutputsText += "╚█████╗██║ ██║██║ ██║██║ ██║██████╗██║██████╗██╗██║ ██║\n";}
-    if (Time > 0.6) {OutputsText += " ╚════╝╚═╝ ╚═╝╚═╝ ╚═╝╚═╝ ╚═╝╚═════╝╚═╝╚═════╝╚═╝╚═╝ ╚═╝\n\n\n";}
-    if (Time > 1.1) {OutputsText += "Welcome to Raps-OS 2.9.0 x86_64\n";}
+    // if (Time > 0.1) {OutputsText += " █████╗██╗ ██╗ ████╗ █████╗ ██╗    ██╗██████╗    ████╗ \n";}
+    // if (Time > 0.2) {OutputsText += "██╔═══╝██║ ██║██╔═██╗██╔═██╗██║    ██║██╔═══╝   ██╔═██╗\n";}
+    // if (Time > 0.3) {OutputsText += "██║    ██████║██████║█████╔╝██║    ██║█████╗    ██████║\n";}
+    // if (Time > 0.4) {OutputsText += "██║    ██╔═██║██╔═██║██╔═██╗██║    ██║██╔══╝    ██╔═██║\n";}
+    // if (Time > 0.5) {OutputsText += "╚█████╗██║ ██║██║ ██║██║ ██║██████╗██║██████╗██╗██║ ██║\n";}
+    // if (Time > 0.6) {OutputsText += " ╚════╝╚═╝ ╚═╝╚═╝ ╚═╝╚═╝ ╚═╝╚═════╝╚═╝╚═════╝╚═╝╚═╝ ╚═╝\n\n\n";}
+    if (Time > 0.1) { OutputsText += "█           ██████╗  █████╗  ██████╗  █████╗          █  \n"; }
+    if (Time > 0.4) { OutputsText += "█           ██╔══██╗██╔══██╗██╔══██╗██╔════╝          █  \n"; }
+    if (Time > 0.6) { OutputsText += "█  . . . .  ██████╔╝███████║██████╔╝█████╗   . . . .  █  \n"; }
+    if (Time > 0.8) { OutputsText += "█           ██╔══██╗██╔══██║██╔═══╝  ╚═══██╗          █  \n"; }
+    if (Time > 1.0) { OutputsText += "█           ██║  ██║██║  ██║██║ ██████████╔╝          █  \n"; }
+    if (Time > 1.2) { OutputsText += "█           ╚═╝  ╚═╝╚═╝  ╚═╝╚═╝ ╚═════════╝           █  \n\n\n"; }
+
+    if (Time > 1.1) {OutputsText += "Welcome to uranium_potato-OS 2.9.0 x86_64\n";}
     if (Time > 1.2) {OutputsText += "Type 'help' to list available commands\n\n\n";}
     if (Time > 1.7) {OutputsText += `Loading ${LoadingChars[Math.ceil((Math.min(3.7, Time) % 0.4) / 0.1) - 1]} ${Math.ceil(Math.min(100, (Time - 1.7) / 0.02))}%\n`;}
     if (Time > 3.7) {OutputsText += ".\n";}

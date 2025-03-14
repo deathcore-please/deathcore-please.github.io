@@ -33,7 +33,7 @@ function LoadShader(WebGL, Type, Source)
 
 function LoadMaterials(MaterialFile)
 {
-    // Define materials dicionary and current material
+    // Define materials dictionary and current material
     const Materials = {};
     let CurrentMaterial = null;
 
