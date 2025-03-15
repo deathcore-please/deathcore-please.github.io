@@ -1,7 +1,7 @@
 # Personal Website
 ![alt text](https://img.shields.io/badge/Javascript_(ES6)-WebGL2-blue) ![alt text](https://img.shields.io/badge/HTML5-CSS3-green)
 
-Welcome to my [personal portfolio website](https://luckeyduckey.github.io/)! This project showcases my work as an aspiring software developer and features a unique blend of modern web design and retro-inspired 3D graphics. Below, you'll find details about the development process, key features, and how to explore the site.
+Welcome to my [personal portfolio website](https://luckeyduckey.github.io/)! Still at a very nascent stage, this website hold information about my experiences, skills, projects, etc. This project showcases my work as a versatile software developer and features a unique blend of modern web design and retro-inspired 3D graphics. Future work on this website will incorporate my work from other other domains of my expertise, such as music, squash, art, and more! Below, you'll find details about the development process, key features, and how to explore the site.
 
 ![alt text](https://github.com/LuckeyDuckey/luckeyduckey.github.io/blob/3210e3ea6967ea8fd43830022a8250f52bf9033f/Images/Banner.png)
 
