@@ -27,11 +27,11 @@ To explore the project locally or contribute:
 
 1. **Clone the repository**:
 ```bash
-git clone https://github.com/LuckeyDuckey/luckeyduckey.github.io.git
+git clone https://github.com/deathcore-please/deathcore-please.github.io.git
 ```
 2. Navigate to the **project directory**:
 ```bash
-cd luckeyduckey.github.io
+cd deathcore-please.github.io
 ```
 3. **Open the index.html file** in your browser to explore the website locally.
 
@@ -47,4 +47,4 @@ cd luckeyduckey.github.io
 - Retro Interface: The retro terminal experience was inspired by [Edward Hwang's portfolio](https://www.edwardh.io/).
 
 ## 📬 Contact
-If you have any questions, feel free to reach out via [Email](mailto:charlieashtond@gmail.com).
+If you have any questions, feel free to reach out via [Email](mailto:rapsrules13@gmail.com).
