@@ -279,7 +279,7 @@ function ExecuteCommand()
 
         case "help":
             if (Arguments.length) {OutputsText += "\nError: 'help' doesn't accept any arguments\n\n";}
-            else {OutputsText += "\nPress 'tab' for auto complete and press 'esc' to exit\na program (.exe file)\n\nLS       Lists current directory contents\nCD       Change directory, '..' moves back, '/' to root\nSTART    Opens specified file in current directory\nCLEAR    Clears all previous terminal outputs\n\n";}
+            else {OutputsText += "\nPress 'tab' for auto complete and press 'esc' to exit\na program (.exe file)\n\nLS       Lists current directory contents\nCD       Change directory, '..' moves back, '/' to root\nSTART    Opens specified file in current directory\nCLEAR    Clears all previous terminal outputs\nUP ARROW Scrolls the page up\nDOWN ARROW Scrolls the page down\n\n";}
             break;
 
         case "":
