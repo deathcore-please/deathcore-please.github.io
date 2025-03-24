@@ -52,6 +52,20 @@ canvas {
     transform: translateY(0%);
 }
 
+#MainDiv1 {
+    width: 100vw;
+    height: 100vh;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow: hidden;/* auto */
+
+    background-color: rgb(255, 255, 255);
+    transition: transform 0.5s ease-in-out;
+    transform: translateY(0%);
+}
+
 #MainDiv.hidden {
     transform: translateY(100%);
 }
@@ -61,7 +75,7 @@ canvas {
     100% { transform: rotate(360deg); }
 }
 
-/* Positioning the container in the top-left */
+
 #MandalaContainer {
     position: absolute;
     top: -777px;
@@ -72,19 +86,53 @@ canvas {
     pointer-events: none;
 }
 
-/* The actual image */
+
 #MandalaImage {
     width: 100%;
     height: auto;
     opacity: 0.2;
     animation: rotateMandala 90s linear infinite;
-    transform-origin: center center; /* Ensures rotation happens around the center */
+    transform-origin: center center;
 }
+
+#MandalaImage1 {
+    width: 100%;
+    height: auto;
+    opacity: 0.4;
+    animation: rotateMandala 90s linear infinite;
+    transform-origin: center center;
+}
+
+#TopPanel {
+    width: 100%;
+    height: 8vh;
+    top: 0;
+    left: 0;
+    position: absolute;
+    pointer-events: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 2vw;
+    z-index: 10;
+    background: none; 
+    border: none;
+}
+
 
 
 #LeftPanel {
     width: 50vh;
-    height: 100%;
+    height: 110%;
+    left: calc(50vw - 50vh);
+    margin-top: 10vh;
+    position: absolute;
+    pointer-events: none;
+}
+
+#LeftPanel1 {
+    width: 50vh;
+    height: 80%;
     left: calc(50vw - 50vh);
     margin-top: 10vh;
     position: absolute;
@@ -92,11 +140,11 @@ canvas {
 }
 
 #RightPanel {
-    width: 50vh;
+    width: 80vh;
     height: 100%;
     position: absolute;
-    padding: 10vh calc(50vw - 50vh) 0 50vw;
-
+    padding: 2vh calc(50vw - 50vh) 0 50vw;
+    top: 12vh;
     overflow-y: scroll;
     overflow-x: hidden;
     -ms-overflow-style: none;  /* Internet Explorer 10+ */
@@ -106,6 +154,22 @@ canvas {
 #RightPanel::-webkit-scrollbar{
     display: none; /* Safari and Chrome */
 }
+
+/* #RightPanel1 {
+    width: 80vh;
+    height: 100%;
+    position: absolute;
+    padding: 2vh calc(50vw - 50vh) 0 50vw;
+    top: 12vh;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    -ms-overflow-style: none; 
+    scrollbar-width: none;  
+}
+
+#RightPanel1::-webkit-scrollbar{
+    display: none;
+} */
 
 #MouseGlow {
     width: 30vmax;
@@ -137,6 +201,7 @@ h1 {
     pointer-events: auto;
 }
 
+
 h2 {
     font-size: 2vh;
     margin: 0 0 1.5vh 0;
@@ -166,6 +231,7 @@ m {
     transform: translateY(-100%);
 }
 
+
 .NavItem {
     display: flex;
     align-items: center;
@@ -173,6 +239,8 @@ m {
     cursor: pointer;
     pointer-events: auto;
 }
+
+/* for academics section */
 
 .NavItemDot {
     width: 1.1vh;
@@ -198,6 +266,35 @@ m {
     color: white;
 }
 
+/* for art section */
+
+.NavItemDot1 {
+    width: 1.1vh;
+    height: 1.1vh;
+    border-radius: 50%;
+    background-color: gray;
+    transition: all 0.3s ease;
+}
+
+.NavItemText1 {
+    margin-left: 1.1vh;
+    font-size: 1.6vh;
+    color: gray;
+    transition: color 0.3s ease;
+}
+
+.NavItem.Active .NavItemDot1 {
+    background-color: rgba(93, 77, 6, 0.5);
+    transform: scale(1.5);
+}
+
+.NavItem.Active .NavItemText1 {
+    color: rgba(93, 77, 6, 0.5);
+}
+
+
+
+
 .Section {
     margin-bottom: 10vh;
 }
@@ -220,8 +317,8 @@ m {
 }
 
 #SocialsContainer a:hover {
-     transform: scale(1.1);
-     filter: invert(100%) brightness(100%);
+    transform: scale(1.1);
+    filter: invert(100%) brightness(100%);
 }
 
 .Project {
@@ -248,4 +345,92 @@ m {
     flex-grow: 1;
     border-bottom: 1px solid gray;
     margin: 0 0.75vh 0.75em 0.75vh;
+}
+
+.ImageCarousel {
+    position: relative;
+    margin: 5vh auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.WideCarousel {
+    height: 70vh;
+    width: 40vw;
+}
+
+.TallCarousel {
+    height: 100vh;
+    width: 40vw;
+}
+
+.CarouselWindow {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.CarouselTrack {
+    display: flex;
+    transition: transform 0.5s ease;
+    width: 100%;
+    height: 100%;
+}
+
+.CarouselTrack img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+.CarouselButton {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    /* background-color: rgba(0,0,0,0.5); */
+    color: rgba(93, 77, 6, 0.5);
+    border: none;
+    font-size: 3vh;
+    padding: 1vh 1.5vh;
+    cursor: pointer;
+    z-index: 2;
+    border-radius: 1vh;
+    transition: background-color 0.3s ease;
+}
+
+.CarouselButton:hover {
+    color: rgba(93, 77, 6, 0.8);
+}
+
+.CarouselButton.Left {
+    left: 1vh;
+}
+
+.CarouselButton.Right {
+    right: 1vh;
+}
+
+.CarouselDots {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1vh;
+    height: 8vh;
+    margin-top: -5vh;
+}
+
+.CarouselDot {
+    width: 0.8vh;
+    height: 0.8vh;
+    background-color: rgba(93, 77, 6, 0.3);
+    border-radius: 50%;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.CarouselDot.Active {
+    background-color: rgba(93, 77, 6, 0.5);
+    transform: scale(1.5);
 }

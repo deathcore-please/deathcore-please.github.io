@@ -1,0 +1,91 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>Raps - Personal Site</title>
+
+        <link rel="stylesheet" href="Styles/Main.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=VT323&display=swap">
+
+    </head>
+
+    <body>
+
+        <canvas id="Canvas3D"></canvas>
+
+        <div id="MainDiv">
+
+            <div id="MouseGlow"></div>
+            <div id="MouseGlowBlur"></div>
+
+            <div id="TopPanel">
+                <a style="text-decoration:none; color:rgb(93, 77, 6);" href="index.html">Academics</a><p style="color:rgb(93, 77, 6)";> &nbsp • &nbsp</p>
+                <a style="text-decoration:none; color:rgb(93, 77, 6);" href="art.html">Art</a><p style="color:rgb(93, 77, 6)";> &nbsp • &nbsp</p>
+                <a style="text-decoration:none; color:rgb(93, 77, 6);" href="music.html">Music</a><p style="color:rgb(93, 77, 6)";> &nbsp • &nbsp</p>
+                <a style="text-decoration:none; color:rgb(93, 77, 6);" href="fpv.html">FPV</a><p style="color:rgb(93, 77, 6)";> &nbsp • &nbsp</p>
+                <a style="text-decoration:none; color:rgb(173, 171, 171);" href="sports.html">Sports</a>
+            </div>
+                
+            <div id="RightPanel">
+                
+
+                <p style="padding-bottom: 95.0vh; font-size: 1.25vh;">Developed by <m>Shvetanshu Gumma (me) and Charlie Ashton</m> in <m>Visual 
+                    Studio Code</m>, built with raw <m>WebGL2</m>, <m>HTML</m>, <m>CSS</m> and <m>JavaScript</m>. Email me and lemme know any 
+                    potential improvements!</p>
+
+            </div>
+
+            <div id="LeftPanel">
+
+                <h1>Coming Soon!</h1>
+
+                <div id="MandalaContainer">
+                    <img src="Images/mandala3.png" alt="Mandala" id="MandalaImage">
+                </div>
+
+                <div id="SocialsContainer">
+                    
+                    <a href="https://github.com/deathcore-please" target="_blank" title="Github">
+                        <img src="Images/GithubIcon.png" alt="Github" style="width:30px;height:30px;">
+                    </a>
+
+                    <a href="mailto:rapsrules13@gmail.com" target="_blank" title="Email">
+                        <img src="Images/EmailIcon.png" alt="Email" style="width:30px;height:30px;">
+                    </a>
+
+                    <a href="https://www.linkedin.com/in/raps13/" target="_blank" title="Linkedin">
+                        <img src="Images/LinkedinIcon.png" alt="Linkedin" style="width:30px;height:30px;">
+                    </a>
+
+                    <a href="raps_resume_uk.pdf" target="_blank" title="Resume">
+                        <img src="Images/CVIcon.png" alt="Resume" style="width:30px;height:30px;">
+                    </a>
+
+                </div>
+            
+            </div>
+
+        </div>
+
+        <button id="MainButton">⬆</button>
+
+        <audio id="ComputerBoot" src="Sounds/ComputerBoot.mp3"></audio>
+        <audio id="ComputerAmbient" src="Sounds/ComputerAmbient.mp3"></audio>
+        <audio id="ComputerBeep" src="Sounds/ComputerBeep.mp3"></audio>
+        <audio id="KeyboardPressed" src="Sounds/KeyboardPressed.mp3"></audio>
+
+        <script src="Scripts/ModelFiles.js"></script>
+        <script src="Scripts/RenderingFunctions.js"></script>
+        <script src="Scripts/TerminalFunction.js"></script>
+        <script src="Scripts/Main.js"></script>
+
+    </body>
+
+</html>
+

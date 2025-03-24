@@ -1,0 +1,357 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>Raps - Personal Site</title>
+
+        <link rel="stylesheet" href="Styles/Main.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=VT323&display=swap">
+
+    </head>
+
+    <script>
+        window.onload = function () {
+            const carousels = document.querySelectorAll('.ImageCarousel');
+        
+            carousels.forEach((carousel, carouselIndex) => {
+                const track = carousel.querySelector('.CarouselTrack');
+                const images = track.querySelectorAll('img');
+                const totalItems = images.length;
+        
+                let currentIndex = 0;
+        
+                // Get associated dots container
+                const dotsContainer = carousel.nextElementSibling;
+                dotsContainer.classList.add('CarouselDots');
+        
+                // Create dots
+                for (let i = 0; i < totalItems; i++) {
+                    const dot = document.createElement('div');
+                    dot.classList.add('CarouselDot');
+                    if (i === 0) dot.classList.add('Active');
+                    dotsContainer.appendChild(dot);
+                }
+        
+                function updateDots() {
+                    const dots = dotsContainer.querySelectorAll('.CarouselDot');
+                    dots.forEach((dot, i) => {
+                        dot.classList.toggle('Active', i === currentIndex);
+                    });
+                }
+        
+                function scroll(direction) {
+                    currentIndex += direction;
+                    if (currentIndex < 0) currentIndex = totalItems - 1;
+                    if (currentIndex >= totalItems) currentIndex = 0;
+        
+                    const shift = -currentIndex * 100;
+                    track.style.transform = `translateX(${shift}%)`;
+        
+                    updateDots();
+                }
+        
+                // Hook up buttons
+                carousel.querySelector('.CarouselButton.Left').onclick = () => scroll(-1);
+                carousel.querySelector('.CarouselButton.Right').onclick = () => scroll(1);
+            });
+        };
+    </script>
+        
+        
+    
+
+    <body>
+
+        <canvas id="Canvas3D"></canvas>
+
+        <div id="MainDiv1">
+
+            <div id="MouseGlow"></div>
+            <div id="MouseGlowBlur"></div>
+
+            <div id="TopPanel">
+                <a style="text-decoration:none; color:rgb(93, 77, 6);" href="index.html">Academics</a><p style="color:rgb(93, 77, 6)";> &nbsp • &nbsp</p>
+                <a style="text-decoration:none; color:rgb(173, 171, 171);" href="art.html">Art</a><p style="color:rgb(93, 77, 6)";> &nbsp • &nbsp</p>
+                <a style="text-decoration:none; color:rgb(93, 77, 6);" href="music.html">Music</a><p style="color:rgb(93, 77, 6)";> &nbsp • &nbsp</p>
+                <a style="text-decoration:none; color:rgb(93, 77, 6);" href="fpv.html">FPV</a><p style="color:rgb(93, 77, 6)";> &nbsp • &nbsp</p>
+                <a style="text-decoration:none; color:rgb(93, 77, 6);" href="sports.html">Sports</a>
+            </div>
+                
+            <div id="RightPanel">
+
+
+
+                <div id="Section1" class="Section">
+                    <h2 style="color: rgba(93, 77, 6, 0.5);">Sketches</h2>
+                    <p align="justify">As much as I love sketching, I stick to caricature drawing since I don't think I have either the patience 
+                        or the talent to draw real-life sketches. These caricatures generally include my favourite manga characters, panels from
+                        said manga (or honestly any panel that I find cool on social media), and random characters/mythical creatures that come
+                        to my mind or which I come across on the net.</p><br>
+
+
+                        <div class="ImageCarousel TallCarousel">
+                            <button class="CarouselButton Left">&#10094;</button>
+                        
+                            <div class="CarouselWindow">
+                                <div class="CarouselTrack">
+                                    <img src="ArtImages/berserk_1.jpg" alt="Image 1">
+                                    <img src="ArtImages/berserk_2.jpg" alt="Image 2">
+                                    <img src="ArtImages/berserk_3.jpg" alt="Image 3">
+                                    <img src="ArtImages/berserk_4.jpg" alt="Image 4">
+                                    <img src="ArtImages/berserk_5.jpg" alt="Image 5">
+                                    <img src="ArtImages/berserk_6.jpg" alt="Image 6">
+                                    <img src="ArtImages/berserk_7.jpg" alt="Image 7">
+                                    <img src="ArtImages/berserk_8.jpg" alt="Image 8">
+                                </div>
+                            </div>
+                        
+                            <button class="CarouselButton Right">&#10095;</button>
+                        </div>                     
+                        <div class="CarouselDots"></div><br>
+
+
+                    <p align="justify">Back in the day I used to draw freehand without self-referencing, but I have slowly grown out of patience to redraw 
+                    mistakes, and honestly avoid them altogether since I draw with solid pens. Hence I first carefully outline a rough sketch
+                    of the piece I intend to make with a pencil (since it is easier to correct) to get the dimensions right. Thereafter, when
+                    I am confident of the general dimensions, ratios and proportions by the pencil sketch, I start with filling up the piece with
+                    my pens.
+                    </p><br>
+
+                    <div class="ImageCarousel TallCarousel">
+                        <button class="CarouselButton Left">&#10094;</button>
+                    
+                        <div class="CarouselWindow">
+                            <div class="CarouselTrack">
+                                <img src="ArtImages/goat_1.jpg" alt="Image 1">
+                                <img src="ArtImages/goat_2.jpg" alt="Image 2">
+                                <img src="ArtImages/goat_3.jpg" alt="Image 3">
+                            </div>
+                        </div>                    
+                        <button class="CarouselButton Right">&#10095;</button>
+                    </div>                    
+                    <div class="CarouselDots"></div><br>
+
+                    <p align="justify">Here are some more random sketches/drawings I have made over a large span of time since a kid (I mean, 
+                        that's pretty evident in some of them):
+                    </p><br>
+
+                    <div class="ImageCarousel TallCarousel">
+                        <button class="CarouselButton Left">&#10094;</button>
+                    
+                        <div class="CarouselWindow">
+                            <div class="CarouselTrack">
+                                <img src="ArtImages/sketch_1.jpg" alt="Image 1">
+                                <img src="ArtImages/sketch_2.jpg" alt="Image 2">
+                                <img src="ArtImages/sketch_3.jpg" alt="Image 3">
+                                <img src="ArtImages/skull.jpg" alt="Image 4">
+                                <img src="ArtImages/monster.jpg" alt="Image 5">
+                                <img src="ArtImages/kid_design.jpg" alt="Image 6">
+                                <img src="ArtImages/uranium_potato.jpg" alt="Image 7">
+                                <img src="ArtImages/potatoed.jpg" alt="Image 8">
+                            </div>
+                        </div>                    
+                        <button class="CarouselButton Right">&#10095;</button>
+                    </div>                    
+                    <div class="CarouselDots"></div>
+
+
+                </div>
+                
+                <div id="Section2" class="Section">
+                    
+                    <h2 style="color: rgba(93, 77, 6, 0.5);">Mandala</h2>
+                    <p align="justify">Mandala is something I have loved making since a kid. Something about its symmetry just mesmerises
+                        me into making more and more. I believe mandala does not require talent, rather it is the ultimate test of time and 
+                        patience. I'm good at t probably because I don't really have much talent but do have lots of time to waste. The first one 
+                        here, as you can see, is not your standard B&W mandala. As a kid I really liked messing with the oil-pastel-scratching
+                        technique. And therefore I splattered the A4 with a rainbow of oil pastel colours, which I then layered with a thick mask 
+                        of black oil pastel. All that remained then was to actually carve out my mandala with a geometry-box divider. Never before had
+                        I thought that the divider would come in handy. 
+                    </p><br>
+
+                    <div class="ImageCarousel WideCarousel">
+                        <button class="CarouselButton Left">&#10094;</button>
+                    
+                        <div class="CarouselWindow">
+                            <div class="CarouselTrack">
+                                <img src="ArtImages/pastel_1.jpg" alt="Image 1">
+                                <img src="ArtImages/pastel_2.jpg" alt="Image 2">
+                                <img src="ArtImages/pastel_3.jpg" alt="Image 3">
+                                <img src="ArtImages/pastel_4.jpg" alt="Image 4">
+                            </div>
+                        </div>                   
+                        <button class="CarouselButton Right">&#10095;</button>
+                    </div>                     
+                    <div class="CarouselDots"></div><br>
+
+                    <p align="justify">Here are a few more relatively relevant mandala I have made:
+                    </p><br>
+
+                    <div class="ImageCarousel WideCarousel">
+                        <button class="CarouselButton Left">&#10094;</button>
+                    
+                        <div class="CarouselWindow">
+                            <div class="CarouselTrack">
+                                <img src="ArtImages/mandala_1.jpg" alt="Image 1">
+                                <img src="ArtImages/mandala_2.jpg" alt="Image 2">
+                                <img src="ArtImages/mandala_3.jpg" alt="Image 3">
+                                <img src="ArtImages/mandala_4.jpg" alt="Image 4">
+                                <img src="ArtImages/mandala_5.jpg" alt="Image 5">                                
+                            </div>
+                        </div>                  
+                        <button class="CarouselButton Right">&#10095;</button>
+                    </div>                     
+                    <div class="CarouselDots"></div>
+
+                </div>
+
+
+                <div id="Section3" class="Section">
+                    <h2 style="color: rgba(93, 77, 6, 0.5);">Comics</h2>
+                    <p align="justify">Making comics came to from a more "exploratory" and "story making" rather than "art" side of me.
+                        When I was 9, had ripped off an Indian superhero and made my own "Nagraj" comic series and was super proud of it.
+                        To be honest, I have been putting even less amount of effort into my comics as far as the "art" is concerned. Therefore,
+                        the pieces you find below are straight unprofessional as far is presentation is concerned. Humor? Well that depends on
+                        you, kind reader. PS, some of these comics need some insider context so you gotta deal with it.
+                    </p><br>
+
+                    <div class="ImageCarousel TallCarousel">
+                        <button class="CarouselButton Left">&#10094;</button>
+                    
+                        <div class="CarouselWindow">
+                            <div class="CarouselTrack">
+                                <img src="ArtImages/comic_1.jpg" alt="Image 1">
+                                <img src="ArtImages/comic_2.jpg" alt="Image 2">
+                                <img src="ArtImages/comic_4.jpg" alt="Image 3">
+                                <img src="ArtImages/comic_5.jpg" alt="Image 4">
+                                <img src="ArtImages/comic_6.jpg" alt="Image 5">
+                                <img src="ArtImages/comic_7.jpg" alt="Image 6">
+                                <img src="ArtImages/comic_8.jpg" alt="Image 7">
+                                <img src="ArtImages/comic_9.jpg" alt="Image 8">
+                                <img src="ArtImages/comic_10.jpg" alt="Image 9">
+                                <img src="ArtImages/comic_11.jpg" alt="Image 10">
+                                <img src="ArtImages/comic_12.jpg" alt="Image 11">
+                                <img src="ArtImages/comic_13.jpg" alt="Image 12">
+                                <img src="ArtImages/comic_14.jpg" alt="Image 13">
+                                <img src="ArtImages/comic_15.jpg" alt="Image 14">
+                                <img src="ArtImages/comic_16.jpg" alt="Image 15">
+                                <img src="ArtImages/comic_17.jpg" alt="Image 16">
+                            </div>
+                        </div>                   
+                        <button class="CarouselButton Right">&#10095;</button>
+                    </div>                     
+                    <div class="CarouselDots"></div><br>
+
+
+                </div>
+
+                <div id="Section4" class="Section">
+                    <h2 style="color: rgba(93, 77, 6, 0.5);">Tools</h2>
+                    <p align="justify">Tools I use and the links to where to source them:</p><br>
+                    <a href="https://www.amazon.co.uk/Artline-Drawing-System-Technical-Pens/dp/B07GT6FNKS/ref=sr_1_5?crid=160LK6WJFMHH7&dib=eyJ2IjoiMSJ9.QTbkfsSX0Vtz1su9yJMviIirTjwVmXCA8UCB8-o3kTFxfGpPi2_mbttk_VkN2z35d02eSb3xWdMU3-4vSb3vIYy93m8K5mzAxZVpt2gL5AdOCL894M7jIwh3LHpPgofyThG2k_hvCXGHipqXozt-4TtBaPkDCWHMDHmaiH1YaliN6SpQ5SFpnFky8_YApqkoa-MCOHj8UEzYew1FgeMyAxNWJSEv5i7Pq8i8kbb9Fe1PBsRazMzTGhwl4n7tTWVgIuDWbLsNRWIVgt_4EWF5KNIGyriY2Ob0n-WQgkr-NCp2RrU00mXVEFFCbkyobAnQLfTWyxVgQLTyOncsi3Bgz_2zVl37Cif0JYiSeIHwcP7PS1D0lmQzA4Pcj8DK0E_5.fcA7r5QQeo_7Q1CA2cStArsIseeoIibyPDT1RrgZ4bI&dib_tag=se&keywords=artline+drawing+system+5+set&qid=1742725386&sprefix=artline+drawing+system+5+se%2Caps%2C148&sr=8-5" target="_blank" class="Project">
+                        <p data-value="Artline Drawing System (0.05, 0.1, 0.3, 0.5, 0.8)" style="color:  gray; white-space: pre;">Artline Drawing System (0.05, 0.1, 0.3, 0.5, 0.8)</p>
+                    </a>
+                    <a href="https://www.amazon.co.uk/Uni-ball-Shalaku-M7-228-Mechanical-Pencil/dp/B09KM1JHTM/ref=sr_1_5?crid=1NOICZGOJLKML&dib=eyJ2IjoiMSJ9.0R81R2kCimup6Zh1CfHQJxVObVI33dwwW1wQDdxYGdziofpMSKdQDSju7EgH0imqpsQEC_wDept7k1Z-bi0L9R0pkjXhSC7W_VdxwoMpGfgZ94gCSJ4xFJPr6JkXA4iXyvSMPoYxkLTBwx5ial1QnJiRHoT8_2WTsN1-pJ2AZb5Un10KmNUt5kpJd8iWx-7DioBI3LU0zI1ngW87TMO48LWeaGFtdkDx-pQIdWRaBX-iDwV7j9PT_fy3YtEjF0pIF3UTpS6uGGBlUmOw9Quc3p-G28M3TOhDlcpadTYC-AxKfPcKYdal_IMH5K3DPEFmlHuFwg06wjf-8SCaw4oMV8QyXoX6iRGI147L6GbhN1d_VLoym5NCYRsBqoxQAoPMXo_hFJzBPl4K3WjXVy-7sEgKN9A4HJwulQOfmsWJ9mK3U9R5HnSlN_CjqtAOb1qQ._rVBpghCAjIl-VYfh7NTmy7vhydJXVPPm7TLwaIVfSw&dib_tag=se&keywords=uni-ball%2Bshalaku%2Bmechanical%2Bpencil%2B0.7mm&qid=1742725657&sprefix=uni-ball%2Bshalaku%2Bmechanical%2Bpencil%2B0.7mm%2Caps%2C168&sr=8-5&th=1" target="_blank" class="Project">
+                        <p data-value="Uni-Ball Shalaku M7-228 (0.7mm) Mechanical Pencil" style="color:  gray; white-space: pre;">Uni-Ball Shalaku M7-228 (0.7mm) Mechanical Pencil</p>
+                    </a>
+                    <a href="https://www.amazon.co.uk/Faber-Castell-Creative-Studio-Oil-Pastels/dp/B000I5HPKA/ref=sr_1_5?crid=1VYJB4EN1EXPE&dib=eyJ2IjoiMSJ9.81cjmef8TNrFp021grsns-q5MZDk2C2XxbRCmsWBZrllbxUsUwdurDP7-X7tYq2aoUZoFcEHizYPJceC8iJRl0fekBZtJjNuVK66slaIAZkmOoDRbXd2B30ZfOE2DVbEuSdEIeAHxEpxUOGqP1Kh0n_9siOEs_f2M_95RsnUivu1klYrs-7mYd7bgfcUUUlDxe6Pae7ndiPAPCQdLc43LHkHgafckG06nKQddHzYgfJnHZz7rwg1XwBHPRC8mMg2v6kz7yUlQPsMQBAe-mzzwT_rjbpdZddfzkIsk6_hLRJR-NUJQvonVf0kPPuirzZumt-yVh9YhJN69i4ghitqkWvHUQC_yUC3g7aBEry_CopjKaYBHNnajOHBt7fp6jrEhEBl2G2jOQ9cowGwg2O7nBbMfivcD_MLOGSKoZTFdRqeZ7dUElp3gHFhzMNhneYG.mDfaA_IWbAPtxF_kQzPlFxM46bhw1FjgGLwk-vrIlnQ&dib_tag=se&keywords=faber%2Bcastell%2Boil%2Bpastels&qid=1742725931&rdc=1&sprefix=faber%2Bcastell%2Boil%2B%2Caps%2C173&sr=8-5&th=1" target="_blank" class="Project">
+                        <p data-value="Faber-Castell Creative Studio Oil Pastels" style="color:  gray; white-space: pre;">Faber-Castell Creative Studio Oil Pastels</p>
+                    </a>
+                    <a href="https://www.o2.co.uk/shop/samsung/galaxy-tab-s9-fe-plus?cm_mmc=googleuk-_-PPC_MBB-_-TABLETS-GO-G-SAMSUNG_TAB_S-_-samsung+galaxy+tab+S9+fe%2B&gad_source=1&gclid=Cj0KCQjw4v6-BhDuARIsALprm31G-t7VxleooMMze_h_lrFmPelGNU458zTOdwzukNtXxHpptjbMXiAaAqz6EALw_wcB&gclsrc=aw.ds&device-type=packages" target="_blank" class="Project">
+                        <p data-value="Samsung Galaxy Tab S9 FE Plus" style="color:  gray; white-space: pre;">Samsung Galaxy Tab S9 FE Plus</p>
+                    </a>
+                    <a href="https://www.amazon.co.uk/Samsung-Galaxy-Official-Pen-Grey/dp/B0CH8PHK9M/ref=asc_df_B0CH8PHK9M?mcid=ec1f63fd6cfa3dfd8014630267729c99&hvocijid=18202562845791591600-B0CH8PHK9M-&hvexpln=74&tag=googshopuk-21&linkCode=df0&hvadid=696285193871&hvpos=&hvnetw=g&hvrand=18202562845791591600&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9045965&hvtargid=pla-2281435177818&gad_source=1&th=1" target="_blank" class="Project">
+                        <p data-value="Samsung Galaxy Official S Pen for Tab S9 FE/FE+" style="color:  gray; white-space: pre;">Samsung Galaxy Official S Pen for Tab S9 FE/FE+</p>
+                    </a>
+                    <a href="https://www.clipstudio.net/en/" target="_blank" class="Project">
+                        <p data-value="Clip Studio Paint" style="color:  gray; white-space: pre;">Clip Studio Paint</p>
+                    </a>
+                </div>
+
+                <p style="padding-bottom: 95.0vh; font-size: 1.25vh;">Developed by <m>Shvetanshu Gumma (me) and Charlie Ashton</m> in <m>Visual 
+                    Studio Code</m>, built with raw <m>WebGL2</m>, <m>HTML</m>, <m>CSS</m> and <m>JavaScript</m>. Email me and lemme know any 
+                    potential improvements!</p>
+
+            </div>
+
+
+            <div id="LeftPanel1">
+
+                <h1 style="color: rgba(93, 77, 6, 0.5);">Shvetanshu<br>Raps Gumma</h1>
+                <h2 style="color: rgba(93, 77, 6, 0.5);">A hobby artist, I draw for fun :&#41;</h2>
+                <!-- <p align="justify">Mandala | Sketching | Anime | Comics</p><br> -->
+
+                <div id="MandalaContainer">
+                    <img src="Images/mandala3.png" alt="Mandala" id="MandalaImage1">
+                </div>
+
+                <canvas id="Canvas3D"></canvas>
+                <nav class="NavContainer">
+
+                <div class="NavItem" DataSection="Section1">
+                    <div class="NavItemDot1"></div>
+                    <span class="NavItemText1">Sketches</span>
+                </div>
+
+                <div class="NavItem" DataSection="Section2">
+                    <div class="NavItemDot1"></div>
+                    <span class="NavItemText1">Mandala</span>
+                </div>
+
+                <div class="NavItem" DataSection="Section3">
+                    <div class="NavItemDot1"></div>
+                    <span class="NavItemText1">Comics</span>
+                </div>
+
+                <div class="NavItem" DataSection="Section4">
+                    <div class="NavItemDot1"></div>
+                    <span class="NavItemText1">Tools</span>
+                </div>
+
+                </nav>
+
+                <div id="SocialsContainer">
+                    
+                    <a href="https://www.instagram.com/deathcore.please/" target="_blank" title="Instagram">
+                        <img src="Images/InstaIcon.png" alt="Instagram" style="width:30px;height:30px;">
+                    </a>
+
+                    <a href="mailto:rapsrules13@gmail.com" target="_blank" title="Email">
+                        <img src="Images/EmailIcon.png" alt="Email" style="width:30px;height:30px;">
+                    </a>
+
+                    <!-- <a href="https://www.linkedin.com/in/raps13/" target="_blank" title="Linkedin">
+                        <img src="Images/LinkedinIcon.png" alt="Linkedin" style="width:30px;height:30px;">
+                    </a>
+
+                    <a href="raps_resume_uk.pdf" target="_blank" title="Resume">
+                        <img src="Images/CVIcon.png" alt="Resume" style="width:30px;height:30px;">
+                    </a> -->
+
+                </div>
+            
+            </div>
+
+        </div>
+
+        <button id="MainButton">⬆</button>
+
+        <audio id="ComputerBoot" src="Sounds/ComputerBoot.mp3"></audio>
+        <audio id="ComputerAmbient" src="Sounds/ComputerAmbient.mp3"></audio>
+        <audio id="ComputerBeep" src="Sounds/ComputerBeep.mp3"></audio>
+        <audio id="KeyboardPressed" src="Sounds/KeyboardPressed.mp3"></audio>
+
+        <script src="Scripts/ModelFiles.js"></script>
+        <script src="Scripts/RenderingFunctions.js"></script>
+        <script src="Scripts/TerminalFunction.js"></script>
+        <script src="Scripts/Main.js"></script>
+
+    </body>
+
+</html>
