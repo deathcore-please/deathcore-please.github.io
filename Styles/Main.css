@@ -52,6 +52,8 @@ canvas {
     transform: translateY(0%);
 }
 
+
+/* for art section */
 #MainDiv1 {
     width: 100vw;
     height: 100vh;
@@ -66,6 +68,36 @@ canvas {
     transform: translateY(0%);
 }
 
+/* for music section */
+#MainDiv2 {
+    width: 100vw;
+    height: 100vh;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow: hidden;/* auto */
+
+    background-color: rgb(0, 0, 0);
+    transition: transform 0.5s ease-in-out;
+    transform: translateY(0%);
+}
+
+/* for FPV section */
+#MainDiv3 {
+    width: 100vw;
+    height: 100vh;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow: hidden;/* auto */
+
+    background-color: rgb(0, 0, 0);
+    transition: transform 0.5s ease-in-out;
+    transform: translateY(0%);
+}
+
 #MainDiv.hidden {
     transform: translateY(100%);
 }
@@ -75,12 +107,69 @@ canvas {
     100% { transform: rotate(360deg); }
 }
 
+@keyframes rotateMandala1 {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(-360deg); }
+}
+
+
+#ProfileContainer{
+    position: absolute;
+    top: -1460px;
+    left: -2140px;
+    z-index: 0;
+    pointer-events: none;
+}
+
+#ProfileContainer img {
+    transform: scale(0.05);
+    pointer-events: auto;
+    transition: transform 0.3s ease;
+}
+
+#ProfileContainer img:hover {
+    transform: scale(0.055); /* Full size on hover */
+}
+
+
+#BorderContainer {
+    position: absolute;
+    top: -103px;
+    left: -280px;
+    width: 500px;
+    height: auto;
+    z-index: 0;
+    pointer-events: none;
+}
+
+#BorderContainer :hover {
+    transform: scale(0.055); /* Full size on hover */
+}
+
+
+#BorderImage {
+    width: 62%;
+    height: auto;
+    opacity: 0.2;
+    animation: rotateMandala 90s linear infinite;
+    transform-origin: center center;
+}
+
 
 #MandalaContainer {
     position: absolute;
     top: -777px;
     left: -1690px;
     width: 2800px;
+    height: auto;
+    z-index: 0;
+    pointer-events: none;
+}
+
+#MandalaContainer1 {
+    position: absolute;
+    top: 400px;
+    left: -380px;
     height: auto;
     z-index: 0;
     pointer-events: none;
@@ -103,6 +192,43 @@ canvas {
     transform-origin: center center;
 }
 
+#MandalaImage2 {
+    width: 100%;
+    height: auto;
+    opacity: 0.2;
+    animation: rotateMandala 90s linear infinite;
+    transform-origin: center center;
+}
+
+#MandalaImage3 {
+    width: 100%;
+    height: auto;
+    opacity: 0.6;
+    animation: rotateMandala1 40s linear infinite;
+    transform-origin: center center;
+}
+
+
+#Image1Container {
+    position: absolute;
+    top: 550px;
+    left: -570px;
+    z-index: 0;
+    pointer-events: none;
+    opacity: 0.7;
+}
+
+#Image2Container {
+    position: absolute;
+    top: -100px;
+    left: -500px;
+    /* width: 2800px;
+    height: auto; */
+    opacity: 0.3;
+    z-index: 0;
+    pointer-events: none;
+}
+
 #TopPanel {
     width: 100%;
     height: 8vh;
@@ -120,7 +246,6 @@ canvas {
 }
 
 
-
 #LeftPanel {
     width: 50vh;
     height: 110%;
@@ -130,9 +255,20 @@ canvas {
     pointer-events: none;
 }
 
+/* for art section */
 #LeftPanel1 {
     width: 50vh;
-    height: 80%;
+    height: 100%;
+    left: calc(50vw - 50vh);
+    margin-top: 10vh;
+    position: absolute;
+    pointer-events: none;
+}
+
+/* for music section */
+#LeftPanel2 {
+    width: 50vh;
+    height: 100%;
     left: calc(50vw - 50vh);
     margin-top: 10vh;
     position: absolute;
@@ -155,21 +291,6 @@ canvas {
     display: none; /* Safari and Chrome */
 }
 
-/* #RightPanel1 {
-    width: 80vh;
-    height: 100%;
-    position: absolute;
-    padding: 2vh calc(50vw - 50vh) 0 50vw;
-    top: 12vh;
-    overflow-y: scroll;
-    overflow-x: hidden;
-    -ms-overflow-style: none; 
-    scrollbar-width: none;  
-}
-
-#RightPanel1::-webkit-scrollbar{
-    display: none;
-} */
 
 #MouseGlow {
     width: 30vmax;
@@ -180,8 +301,24 @@ canvas {
     top: 50%;
     translate: -50% -50%;
 
-    background-color: rgba(255, 167, 25, 0.25);
+    /* background-color: rgba(255, 167, 25, 0.25); */
     border-radius: 50%;
+}
+
+.GoldenGlow {
+    background-color: rgba(255, 167, 25, 0.25);
+}
+
+.GoldenGlow1 {
+    background-color: rgba(255, 167, 25, 0.45);
+}
+
+.RedGlow {
+    background-color: rgba(153, 2, 2, 0.25);
+}
+
+.SilverGlow {
+    background-color: rgba(192, 192, 192, 0.25);
 }
 
 #MouseGlowBlur {
@@ -218,12 +355,6 @@ p {
     pointer-events: auto;
 }
 
-/*
-m {
-    font-weight: bold;
-    color: rgb(145, 145, 145);
-}
-*/
 
 .NavContainer {
     position: absolute;
@@ -292,8 +423,57 @@ m {
     color: rgba(93, 77, 6, 0.5);
 }
 
+/* for music section */
 
+.NavItemDot2 {
+    width: 1.1vh;
+    height: 1.1vh;
+    border-radius: 50%;
+    background-color: gray;
+    transition: all 0.3s ease;
+}
 
+.NavItemText2 {
+    margin-left: 1.1vh;
+    font-size: 1.6vh;
+    color: gray;
+    transition: color 0.3s ease;
+}
+
+.NavItem.Active .NavItemDot2 {
+    background-color: rgba(255, 0, 0, 0.544);
+    transform: scale(1.5);
+}
+
+.NavItem.Active .NavItemText2 {
+    color: rgba(255, 0, 0, 0.544);
+}
+
+/* for fpv section */
+
+.NavItemDot3 {
+    width: 1.1vh;
+    height: 1.1vh;
+    border-radius: 50%;
+    background-color: gray;
+    transition: all 0.3s ease;
+}
+
+.NavItemText3 {
+    margin-left: 1.1vh;
+    font-size: 1.6vh;
+    color: gray;
+    transition: color 0.3s ease;
+}
+
+.NavItem.Active .NavItemDot3 {
+    background-color: rgb(255, 255, 255);
+    transform: scale(1.5);
+}
+
+.NavItem.Active .NavItemText3 {
+    color: rgb(255, 255, 255);
+}
 
 .Section {
     margin-bottom: 10vh;
@@ -365,6 +545,10 @@ m {
     height: 100vh;
     width: 40vw;
 }
+.TallCarousel1 {
+    height: 70vh;
+    width: 30vw;
+}
 
 .CarouselWindow {
     width: 100%;
@@ -403,6 +587,7 @@ m {
 
 .CarouselButton:hover {
     color: rgba(93, 77, 6, 0.8);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.7); 
 }
 
 .CarouselButton.Left {
@@ -433,4 +618,151 @@ m {
 .CarouselDot.Active {
     background-color: rgba(93, 77, 6, 0.5);
     transform: scale(1.5);
+}
+
+
+
+
+.VideoCarousel {
+    position: relative;
+    width: 40vw;
+    height: 45vh;
+    margin: 5vh auto;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    
+}
+
+.VideoCarouselWindow {
+    width: 100%;
+    overflow: hidden;
+}
+
+
+.VideoTrack {
+    display: flex;
+    transition: transform 0.5s ease;
+    gap: 2vh;
+}
+
+.VideoThumbnail {
+    flex: 0 0 calc(100% - 2vh); /* Thumbnail width minus the gap */
+    max-width: calc(100% - 2vh); /* Same calculation for max-width */
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    margin: 0 1vh; /* Add half of the gap on each side */
+    border-radius: 1vh;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.VideoThumbnail:hover {
+    transform: scale(1.05);
+}
+
+
+.VideoCarouselButton {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: rgba(0, 0, 0, 0.695); /* Same soft brown shade */
+    border: none;
+    font-size: 3vh;
+    padding: 1vh 1.5vh; /* Gives it that rectangular pill shape */
+    cursor: pointer;
+    z-index: 2;
+    border-radius: 1vh;
+    transition: background-color 0.3s ease;
+    background-color: rgba(255, 255, 255, 0.8); /* optional - uncomment to match the image carousel */
+}
+
+.VideoCarouselButton:hover {
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.7);
+}
+
+.VideoCarouselButton.Left {
+    left: 1vh; /* adjust depending on your layout */
+}
+
+.VideoCarouselButton.Right {
+    right: 1vh; /* adjust depending on your layout */
+}
+
+#VideoModal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+}
+
+.VideoPlayerWrapper {
+    position: relative;
+    width: 80vw;
+    max-width: 960px;
+    aspect-ratio: 16 / 9;
+}
+
+#YouTubePlayer {
+    width: 100%;
+    height: 100%;
+    border-radius: 1vh;
+}
+
+
+#CloseVideo {
+    position: absolute;
+    top: 2vh;
+    right: 50%;
+    width: 4vh;
+    height: 4vh;
+    background-color: rgba(255, 255, 255, 0);
+    color: rgba(0, 0, 0, 0);
+    font-size: 3vh;
+    font-weight: bold;
+    border: none;
+    border-radius: 50%; 
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s ease, background-color 0.2s ease, color 0.2s ease;
+    z-index: 1000; 
+}
+
+
+#HoverArea {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; 
+    height: 15%;
+    z-index: 999; 
+    cursor: pointer;
+}
+
+
+#HoverArea:hover + #CloseVideo {
+    background-color: rgba(255, 255, 255, 0.5);
+    color: rgba(0, 0, 0, 0.489);
+    transform: scale(1.1);
+}
+
+#CloseVideo:hover {
+    background-color: rgba(255, 255, 255, 0.8); 
+    color: rgba(0, 0, 0, 0.8);
+    transform: scale(1.3); 
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); 
+}
+
+
+.Hidden {
+    display: none !important;
 }

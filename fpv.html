@@ -14,26 +14,197 @@
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=VT323&display=swap">
 
     </head>
+        
 
     <body>
 
         <canvas id="Canvas3D"></canvas>
 
-        <div id="MainDiv1">
+        <div id="MainDiv3">
 
-            <div id="MouseGlow"></div>
+            <div id="MouseGlow" class="SilverGlow"></div>
             <div id="MouseGlowBlur"></div>
 
             <div id="TopPanel">
-                <a style="text-decoration:none; color:rgb(93, 77, 6);" href="index.html">Academics</a><p style="color:rgb(93, 77, 6)";> &nbsp • &nbsp</p>
-                <a style="text-decoration:none; color:rgb(93, 77, 6);" href="art.html">Art</a><p style="color:rgb(93, 77, 6)";> &nbsp • &nbsp</p>
-                <a style="text-decoration:none; color:rgb(93, 77, 6);" href="music.html">Music</a><p style="color:rgb(93, 77, 6)";> &nbsp • &nbsp</p>
-                <a style="text-decoration:none; color:rgb(173, 171, 171);" href="fpv.html">FPV</a><p style="color:rgb(93, 77, 6)";> &nbsp • &nbsp</p>
-                <a style="text-decoration:none; color:rgb(93, 77, 6);" href="sports.html">Sports</a>
+                <a style="text-decoration:none; color:rgb(160, 160, 160);" href="index.html">Academics</a><p style="color:rgb(160, 160, 160)";> &nbsp • &nbsp</p>
+                <a style="text-decoration:none; color:rgb(160, 160, 160);" href="art.html">Art</a><p style="color:rgb(160, 160, 160)";> &nbsp • &nbsp</p>
+                <a style="text-decoration:none; color:rgb(255, 255, 255);" href="fpv.html">FPV</a><p style="color:rgb(160, 160, 160)";> &nbsp • &nbsp</p>
+                <a style="text-decoration:none; color:rgb(160, 160, 160);" href="music.html">Music</a><p style="color:rgb(160, 160, 160)";> &nbsp • &nbsp</p>
+                <a style="text-decoration:none; color:rgb(160, 160, 160);" href="sports.html">Sports</a>
             </div>
                 
             <div id="RightPanel">
-                
+
+
+                <div id="Section1" class="Section">
+                    <h2>About</h2>
+                    <p align="justify">I am an avid FPV hobbyist, and discovered FPV back in 2019 during te first year of my undergraduate degree.
+                        Starting off with being awed by my neighbour who built RC fixed-wing models, I started experimenting with ardupilot and 
+                        pixhawk based drones under his guidance before moving on to FPV. And since then, I have never looked back.
+                        <br><br>
+                        With experience ranging from shooting commercially, to building custom quads for various clients, this hobby has a special
+                        place in my heart which taps onto my dreams of becoming a fighter pilot (its still a dream btw) as well irks my inner
+                        engineer. On that note,if you like my work, feel free to hit me up for any FPV shoots in London/Delhi (depending on where 
+                        I currently am)!
+                    </p>
+                </div>
+
+                <div id="Section2" class="Section">
+                    <h2>Freestyle</h2>
+                    <p align="justify">Although I pursue this hobby purely for fun, I pride myself as a freestyle pilot from India. We have a huge
+                        and passionate FPV community, but lack international representation and development of freestyle skills. I want to change
+                        that and prove that freestyle talent in India exists (...my friend says there are more direct ways to sing praises for yourself).
+                        Here are a few freestyle videos I could salvage. A lot more of them exist which I either couldn't dig up or aren't good
+                        enough. And yeah, more are definitely on the way!
+                        
+
+                        <div class="VideoCarousel">
+                            <button class="VideoCarouselButton Left">&#10094;</button>                        
+                            <div class="CarouselWindow">
+                                <div class="VideoTrack">
+                                    <img class="VideoThumbnail" src="Images/bathfpv.png" data-video-id="FKrYOMHe6ns" alt="Thumbnail 1">
+                                    <img class="VideoThumbnail" src="Images/project1.jpg" data-video-id="GW0vMd4xwo8" alt="Thumbnail 2">
+                                    <img class="VideoThumbnail" src="Images/ftwhiskey.jpg" data-video-id="Rkhq5EiuIC0" alt="Thumbnail 3">
+                                    <img class="VideoThumbnail" src="Images/project2.jpg" data-video-id="JMcVGbmTEDk" alt="Thumbnail 4">
+                                    <img class="VideoThumbnail" src="Images/dive.jpg" data-video-id="AdNc6xIXyy8" alt="Thumbnail 5">
+                                </div>
+                            </div>
+                        
+                            <button class="VideoCarouselButton Right">&#10095;</button>
+                        </div>
+
+
+
+                </div>
+
+                <div id="Section3" class="Section">
+                    <h2>Experience</h2>
+                    <p align="justify">I'd be stupid to not try to monetize my skills here, and was lucky enough to be surrounded by nice
+                        and like-minded people who were genuinely interested in the relatively new tech platform. Hence, FPV did land me a few
+                        fun and invigorating gigs whenever I had some free time. Here are some relevant roles (both freelance and contracts):
+                    </p><br>
+                    <a href="https://www.bennett.edu.in/" target="_blank" class="Project">
+                        <p data-value="Student Teaching Assistant (FPV and UAV) " style="color: white; font-weight: bold; white-space: pre;">Student Teaching Assistant (FPV and UAV)</p>
+                        <div class="Separator"></div>
+                        <p data-value="Bennett University, Jun 2022 – Dec 2022">Bennett University, Jun 2022 – Dec 2022</p>
+                    </a>
+                    
+                    <a href="https://indianairforce.nic.in/" target="_blank" class="Project">
+                        <p data-value="Technology Demonstrator " style="color: white; font-weight: bold; white-space: pre;">Technology Demonstrator </p>
+                        <div class="Separator"></div>
+                        <p data-value="Indian Air Force/DRDO, Aug 2021">Indian Air Force/DRDO, Aug 2021</p>
+                    </a>
+
+                    <a href="https://www.instagram.com/buddh.international.circuit/?hl=en" target="_blank" class="Project">
+                        <p data-value="FPV Cinematographer (Freelance) " style="color: white; font-weight: bold; white-space: pre;">FPV Cinematographer (Freelance) </p>
+                        <div class="Separator"></div>
+                        <p data-value="Buddh International Circuit, Dec 2021 - Aug 2023">Buddh International Circuit, Dec 2021 - Aug 2023</p>
+                    </a>
+
+                    <a href="https://indianflyingcommunity.com/" target="_blank" class="Project">
+                        <p data-value="Technology Associate " style="color: white; font-weight: bold; white-space: pre;">Technology Associate </p>
+                        <div class="Separator"></div>
+                        <p data-value="The IFC (Startup), Jan 2020 - Oct 2022">The IFC (Startup), Jan 2020 - Oct 2022</p>
+                    </a>
+
+                    <a href="https://indianarmy.nic.in/" target="_blank" class="Project">
+                        <p data-value="Drone Cinematographer (Freelance) " style="color: white; font-weight: bold; white-space: pre;">Drone Cinematographer (Freelance) </p>
+                        <div class="Separator"></div>
+                        <p data-value="Indian Air Force/Indian Army, Mar 2020">Indian Air Force/Indian Army, Mar 2020</p>
+                    </a>
+
+                    <a href="https://indianairforce.nic.in/" target="_blank" class="Project">
+                        <p data-value="Unmanned Recon Pilot " style="color: white; font-weight: bold; white-space: pre;">Unmanned Recon Pilot </p>
+                        <div class="Separator"></div>
+                        <p data-value="Indian Air Force, Dec 2019">Indian Air Force, Dec 2019</p>
+                    </a>
+
+                </div>
+
+
+                <div id="Section4" class="Section">
+                    
+                    <h2>Gallery & Builds</h2>
+                    <p align="justify">Probably a hot take, but I love building quads far more than actually flying them. For every 5 minutes of
+                        flying, I probably spend an hour on the bench. There's just something about brand new parts on my workbench that makes
+                        it so addictive (as far as my budget allows, which is not very much tbf). I pride myself in making clean and beautiful
+                        builds, and every quad I build is so beautiful that your flabbers will be ghasted by looking at them. Here are a few pics
+                        from my FPV gallery:
+                    </p><br>
+
+                    <div class="ImageCarousel TallCarousel1">
+                        <button class="CarouselButton Left">&#10094;</button>
+                    
+                        <div class="CarouselWindow">
+                            <div class="CarouselTrack">
+                                <img src="DroneImages/raijin_mk_II.jpg" alt="Image 1">
+                                <img src="DroneImages/makkhi_mk_III.jpg" alt="Image 2">
+                                <img src="DroneImages/chimera.jpg" alt="Image 3">
+                                <img src="DroneImages/racer1.jpg" alt="Image 4">
+                                <img src="DroneImages/flying_heel.jpg" alt="Image 5">
+                                <img src="DroneImages/racer.jpg" alt="Image 6">
+                                <img src="DroneImages/raijin_mk_I.jpg" alt="Image 7">
+                                <img src="DroneImages/tiny.jpg" alt="Image 8">
+                                <img src="DroneImages/makkhi_mk_II.jpg" alt="Image 9">
+                                <img src="DroneImages/mk3.jpg" alt="Image 10">
+                                <img src="DroneImages/bag.jpg" alt="Image 11">
+                                <img src="DroneImages/wall.jpg" alt="Image 11">
+                                <img src="DroneImages/dog.jpg" alt="Image 12">
+                                <img src="DroneImages/besties.jpg" alt="Image 13">
+                                <img src="DroneImages/bearfpv.jpg" alt="Image 14">
+                                <img src="DroneImages/worktable.jpg" alt="Image 15">
+                            </div>
+                        </div>                   
+                        <button class="CarouselButton Right">&#10095;</button>
+                    </div>                     
+                    <div class="CarouselDots"></div><br>
+
+                    <!-- <p align="justify">With upwards of 50 builds over these years for myself and various clients, I have had five main builds that have served me
+                    loyally since starting out as an FPV pilot. While most of their pics can be observed from the gallery above, please find their
+                    specs below:</p> -->
+                    
+
+                </div>
+
+                <div id="Section5" class="Section">
+                    <h2>Equipment</h2>
+                    <p align="justify">Equipment and tools I use and the links to where to source them (some might be out of stock):</p><br>
+                    <a href="https://www.radiomasterrc.com/products/tx16s-mark-ii-max-radio-controller?variant=42850724085991" target="_blank" class="Project">
+                        <p data-value="Radiomaster TX16 MKII Max with AG01 (4-in-1)" style="color:  gray; white-space: pre;">Radiomaster TX16 MKII Max with AG01 (4-in-1)</p>
+                    </a>
+                    <a href="https://www.skyzonefpv.com/en-gb/products/sky04x?srsltid=AfmBOop6mz0LhNXQtFhF2QvLAnm3Vos7MY9WdkQR_UsU6pNH0O8bnf-l" target="_blank" class="Project">
+                        <p data-value="Skyzone SKYO4X V2 FPV Goggles" style="color:  gray; white-space: pre;">Skyzone SKYO4X FPV Goggles</p>
+                    </a>
+                    <a href="https://www.hobbyrc.co.uk/walksnail-avatar-vrx?gad_source=1&gclid=CjwKCAjw-qi_BhBxEiwAkxvbkEhcz6Tx1zqcv6D_YRGe0MW7IJao4j_cD7YeW2k-5iqpqIvGH4YvCxoCWr8QAvD_BwE" target="_blank" class="Project">
+                        <p data-value="Walksnail HD VRX" style="color:  gray; white-space: pre;">Walksnail HD VRX</p>
+                    </a>
+                    <a href="https://yourfpv.co.uk/product/axis-thor-elrs-tx-pro-expresselrs-transmitter-module/" target="_blank" class="Project">
+                        <p data-value="Axis Thor Pro 2.4GHz ELRS Module" style="color:  gray; white-space: pre;">Axis Thor Pro 2.4GHz ELRS Module</p>
+                    </a>
+                    <a href="https://www.ebay.co.uk/itm/144830915171?chn=ps&_ul=GB&_trkparms=ispr%3D1&amdata=enc%3A1FADOQIK-S7qCJZZE3Pclsg38&norover=1&mkevt=1&mkrid=710-134428-41853-0&mkcid=2&mkscid=101&itemid=144830915171&targetid=2405654676673&device=c&mktype=pla&googleloc=9045965&poi=&campaignid=21697391927&mkgroupid=177203736618&rlsatarget=pla-2405654676673&abcId=10027104&merchantid=430066597&gad_source=1&gclid=CjwKCAjw-qi_BhBxEiwAkxvbkAnVI8p43Ln1l1buYDcKNaE-NfBLzjMuiBc0Oe-701kzw9FNQC0JqBoC_CsQAvD_BwE" target="_blank" class="Project">
+                        <p data-value="Jumpter T-Lite (4-in-1)" style="color:  gray; white-space: pre;">Jumper T Lite (4-in-1)</p>
+                    </a>
+                    <a href="https://gopro.com/en/gb/shop/cameras/hero10-black/CHDHX-101-master.html?srsltid=AfmBOoqh6vqTMn9DfIVL03pk0KU2kGObyE3T-Mni1K189d8NP_SOjv7C" target="_blank" class="Project">
+                        <p data-value="GoPro Hero 10 Black" style="color:  gray; white-space: pre;">GoPro Hero 10 Black</p>
+                    </a>
+                    <a href="https://shop.iflight.com/iFlight-FPV-Drone-Backpack-pro1572?srsltid=AfmBOopt9t80_x6QuyrfPNiZnl83LD0288HmVVt6INKr4nITwFJhvLmE" target="_blank" class="Project">
+                        <p data-value="iFlight FPV Drone Backpack" style="color:  gray; white-space: pre;">iFlight FPV Drone Backpack</p>
+                    </a>
+                    <a href="https://www.hobbyrc.co.uk/sequre-sq-001-soldering-iron-kit?gad_source=1&gclid=CjwKCAjw-qi_BhBxEiwAkxvbkD6NX6r52mixPsIQCAw8vegW_jyY7XTtzjM4E4CWWGqqa3ythOpoVBoCVLAQAvD_BwE" target="_blank" class="Project">
+                        <p data-value="Sequire SQ001 Soldering Iron" style="color:  gray; white-space: pre;">Sequire SQ001 Soldering Iron</p>
+                    </a>
+                    <a href="https://www.unmannedtechshop.co.uk/product/tbs-solder-100g/?gad_source=1&gclid=CjwKCAjw-qi_BhBxEiwAkxvbkD40dqkUVJrr5AcYBbPWqJKJ8VtNEB_Ua52w680j6SGZQf3cx4U_RhoCemwQAvD_BwE" target="_blank" class="Project">
+                        <p data-value="TBS Soldering Wire (0.8mm)" style="color:  gray; white-space: pre;">TBS Soldering Wire (0.8mm)</p>
+                    </a>
+                    <a href="https://www.flyingtech.co.uk/product/sequre-sq-es126-smart-electric-screwdriver-with-24-tool-bits/" target="_blank" class="Project">
+                        <p data-value="Sequire SQ-ES126 Screwdriver" style="color:  gray; white-space: pre;">Sequire SQ-ES126 Screwdriver</p>
+                    </a>
+                    <a href="https://www.blackmagicdesign.com/uk/products/davinciresolve" target="_blank" class="Project">
+                        <p data-value="DaVinci Resolve" style="color:  gray; white-space: pre;">DaVinci Resolve</p>
+                    </a>
+                </div>
+
+
 
                 <p style="padding-bottom: 95.0vh; font-size: 1.25vh;">Developed by <m>Shvetanshu Gumma (me) and Charlie Ashton</m> in <m>Visual 
                     Studio Code</m>, built with raw <m>WebGL2</m>, <m>HTML</m>, <m>CSS</m> and <m>JavaScript</m>. Email me and lemme know any 
@@ -43,41 +214,54 @@
 
             <div id="LeftPanel1">
 
-                <h1 style="color: rgba(93, 77, 6, 0.5);">Coming Soon!</h1>
+                <h1 style="color: rgb(255, 255, 255);">Raps FPV</h1>
 
-                <div id="MandalaContainer">
-                    <img src="Images/mandala3.png" alt="Mandala" id="MandalaImage">
+                <h2 style="color: grey;">FPV logos are cringe honestly</h2>
+
+                <div id="MandalaContainer1">
+                    <img src="Images/motor.png" alt="Mandala" id="MandalaImage3">
+                </div>
+                <div id="Image1Container">
+                    <img src="Images/motorInert.png">
+                </div>
+                <div id="Image2Container">
+                    <img src="Images/circuit.png">
                 </div>
 
-                <!-- <canvas id="Canvas3D"></canvas>
+                <canvas id="Canvas3D"></canvas>
                 <nav class="NavContainer">
 
                 <div class="NavItem" DataSection="Section1">
-                    <div class="NavItemDot"></div>
-                    <span class="NavItemText">About</span>
+                    <div class="NavItemDot3"></div>
+                    <span class="NavItemText3">About</span>
                 </div>
 
                 <div class="NavItem" DataSection="Section2">
-                    <div class="NavItemDot"></div>
-                    <span class="NavItemText">Projects</span>
+                    <div class="NavItemDot3"></div>
+                    <span class="NavItemText3">Freestyle</span>
                 </div>
 
                 <div class="NavItem" DataSection="Section3">
-                    <div class="NavItemDot"></div>
-                    <span class="NavItemText">Experience</span>
+                    <div class="NavItemDot3"></div>
+                    <span class="NavItemText3">Experience</span>
                 </div>
 
                 <div class="NavItem" DataSection="Section4">
-                    <div class="NavItemDot"></div>
-                    <span class="NavItemText">Research</span>
+                    <div class="NavItemDot3"></div>
+                    <span class="NavItemText3">Gallery & Builds</span>
                 </div>
 
-                </nav> -->
+                <div class="NavItem" DataSection="Section5">
+                    <div class="NavItemDot3"></div>
+                    <span class="NavItemText3">Equipment</span>
+                </div>
+
+                </nav>
 
                 <div id="SocialsContainer">
                     
-                    <a href="https://github.com/deathcore-please" target="_blank" title="Github">
-                        <img src="Images/GithubIcon.png" alt="Github" style="width:30px;height:30px;">
+                    <a href="https://www.instagram.com/deathcore.please/" target="_blank" title="Instagram">
+                        <img src="Images/InstaIcon.png" alt="Instagram" style="width:30px;height:30px;">
                     </a>
 
                     <a href="mailto:rapsrules13@gmail.com" target="_blank" title="Email">
@@ -88,9 +272,9 @@
                         <img src="Images/LinkedinIcon.png" alt="Linkedin" style="width:30px;height:30px;">
                     </a>
 
-                    <a href="raps_resume_uk.pdf" target="_blank" title="Resume">
+                    <!-- <a href="raps_resume_uk.pdf" target="_blank" title="Resume">
                         <img src="Images/CVIcon.png" alt="Resume" style="width:30px;height:30px;">
-                    </a>
+                    </a> -->
 
                 </div>
             
@@ -110,6 +294,150 @@
         <script src="Scripts/TerminalFunction.js"></script>
         <script src="Scripts/Main.js"></script>
 
+        <div id="VideoModal" class="Hidden">
+            <div class="VideoPlayerWrapper">
+                <div id="HoverArea"></div>
+                <button id="CloseVideo">✖</button>
+                <iframe id="YouTubePlayer" src="" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </div>
+
+
+        <script>
+            window.onload = function () {
+                // Video Carousel Logic
+                const modal = document.getElementById('VideoModal');
+                const player = document.getElementById('YouTubePlayer');
+                const closeBtn = document.getElementById('CloseVideo');
+                const videoTrack = document.querySelector('.VideoTrack');
+                const videoThumbnails = Array.from(document.querySelectorAll('.VideoThumbnail'));
+                const videoLeftButton = document.querySelector('.VideoCarouselButton.Left');
+                const videoRightButton = document.querySelector('.VideoCarouselButton.Right');
+                let videoCurrentIndex = 0;
+            
+                // Clone thumbnails for seamless loop
+                function cloneThumbnails() {
+                    const firstClones = videoThumbnails.slice(0, 3).map(item => item.cloneNode(true));
+                    const lastClones = videoThumbnails.slice(-3).map(item => item.cloneNode(true));
+            
+                    firstClones.forEach(clone => videoTrack.appendChild(clone));
+                    lastClones.forEach(clone => videoTrack.insertBefore(clone, videoTrack.firstChild));
+                }
+                cloneThumbnails();
+            
+                const videoItemWidth = videoThumbnails[0].offsetWidth + 2 * parseFloat(getComputedStyle(videoTrack).gap) || 0;
+                const videoTotalItems = videoTrack.children.length;
+            
+                function updateVideoCarousel() {
+                    videoTrack.style.transition = "transform 0.5s ease";
+                    const shift = -(videoItemWidth * videoCurrentIndex);
+                    videoTrack.style.transform = `translateX(${shift}px)`;
+                }
+            
+                function checkVideoLoop() {
+                    if (videoCurrentIndex >= videoTotalItems - 3) {
+                        videoCurrentIndex = 3;
+                        videoTrack.style.transition = "none";
+                        updateVideoCarousel();
+                    }
+                    if (videoCurrentIndex < 0) {
+                        videoCurrentIndex = videoTotalItems - 6;
+                        videoTrack.style.transition = "none";
+                        updateVideoCarousel();
+                    }
+                }
+            
+                videoLeftButton.addEventListener('click', () => {
+                    videoCurrentIndex--;
+                    updateVideoCarousel();
+                    setTimeout(checkVideoLoop, 500);
+                });
+            
+                videoRightButton.addEventListener('click', () => {
+                    videoCurrentIndex++;
+                    updateVideoCarousel();
+                    setTimeout(checkVideoLoop, 500);
+                });
+            
+                // Open video modal on thumbnail click
+                document.querySelectorAll('.VideoThumbnail').forEach(thumbnail => {
+                    thumbnail.addEventListener('click', () => {
+                        const videoId = thumbnail.dataset.videoId;
+                        if (!videoId) return;
+            
+                        player.src = `https://www.youtube.com/embed/${videoId}?autoplay=1`;
+                        modal.classList.remove('Hidden');
+                    });
+                });
+            
+                // Close video modal function
+                function closeVideoModal() {
+                    modal.classList.add('Hidden');
+                    player.src = ""; // Stop video
+                }
+            
+                // Close video modal on button click
+                closeBtn.addEventListener('click', closeVideoModal);
+            
+                // Close video modal on Escape key press
+                document.addEventListener('keydown', (event) => {
+                    if (event.key === 'Escape' && !modal.classList.contains('Hidden')) {
+                        closeVideoModal();
+                    }
+                });
+            
+                // Initialize video carousel
+                videoCurrentIndex = 3;
+                updateVideoCarousel();
+            
+                // Image Carousel Logic
+                const carousels = document.querySelectorAll('.ImageCarousel');
+            
+                carousels.forEach((carousel, carouselIndex) => {
+                    const track = carousel.querySelector('.CarouselTrack');
+                    const images = track.querySelectorAll('img');
+                    const totalItems = images.length;
+            
+                    let currentIndex = 0;
+            
+                    // Get associated dots container
+                    const dotsContainer = carousel.nextElementSibling;
+                    dotsContainer.classList.add('CarouselDots');
+            
+                    // Create dots
+                    for (let i = 0; i < totalItems; i++) {
+                        const dot = document.createElement('div');
+                        dot.classList.add('CarouselDot');
+                        if (i === 0) dot.classList.add('Active');
+                        dotsContainer.appendChild(dot);
+                    }
+            
+                    function updateDots() {
+                        const dots = dotsContainer.querySelectorAll('.CarouselDot');
+                        dots.forEach((dot, i) => {
+                            dot.classList.toggle('Active', i === currentIndex);
+                        });
+                    }
+            
+                    function scroll(direction) {
+                        currentIndex += direction;
+                        if (currentIndex < 0) currentIndex = totalItems - 1;
+                        if (currentIndex >= totalItems) currentIndex = 0;
+            
+                        const shift = -currentIndex * 100;
+                        track.style.transform = `translateX(${shift}%)`;
+            
+                        updateDots();
+                    }
+            
+                    // Hook up buttons
+                    carousel.querySelector('.CarouselButton.Left').onclick = () => scroll(-1);
+                    carousel.querySelector('.CarouselButton.Right').onclick = () => scroll(1);
+                });
+            };
+        </script>
+            
+            
     </body>
 
 </html>
