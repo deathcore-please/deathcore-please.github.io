@@ -117,7 +117,7 @@ canvas {
     position: absolute;
     top: -1460px;
     left: -2140px;
-    z-index: 0;
+    z-index: 100;
     pointer-events: none;
 }
 
@@ -138,7 +138,7 @@ canvas {
     left: -280px;
     width: 500px;
     height: auto;
-    z-index: 0;
+    z-index: 100;
     pointer-events: none;
 }
 
@@ -153,6 +153,7 @@ canvas {
     opacity: 0.2;
     animation: rotateMandala 90s linear infinite;
     transform-origin: center center;
+    z-index: 100;
 }
 
 
@@ -162,7 +163,7 @@ canvas {
     left: -1690px;
     width: 2800px;
     height: auto;
-    z-index: 0;
+    z-index: 100;
     pointer-events: none;
 }
 
@@ -171,7 +172,7 @@ canvas {
     top: 400px;
     left: -380px;
     height: auto;
-    z-index: 0;
+    z-index: 100;
     pointer-events: none;
 }
 
@@ -228,6 +229,21 @@ canvas {
     z-index: 0;
     pointer-events: none;
 }
+
+/* #Image3Container {
+    position: absolute;
+    top: 50px;
+    left: -1000px;
+    width: 1000;
+    height: auto;
+    z-index: 0;
+    pointer-events: none;
+    opacity: 0.4;
+}
+#Image3Container img {
+    width: 80%;
+    height: auto;
+} */
 
 #TopPanel {
     width: 100%;

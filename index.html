@@ -40,7 +40,7 @@
                         (finished as a valedictorian with a Distinction). My expertise spans machine learning, deep learning, automation, and 
                         reinforcement learning, with applications in computer vision, predictive analytics, and autonomous systems. I have 
                         developed object detection models, AI-driven decision-making systems, and UAV control frameworks using tools like ROS2, 
-                        DRL, OpenCV, and PyTorch.<br><br>
+                        DL, OpenCV, and PyTorch.<br><br>
                         Beyond machine learning, my work extends to game development with LOVE2D and Lua, full-stack web development with Django 
                         and REST APIs, and building UAVs (drones and fixed wings). I have experience with structured and unstructured databases, 
                         cloud computing, and scalable software architectures, ensuring efficient and high-performance software solutions.</p>
@@ -94,7 +94,25 @@
                         <p data-value="Serious Game to teach ML">Serious Game to teach ML</p>
                         <div class="Separator"></div>
                         <p data-value="2024">2024</p>
-                    </a>
+                    </a><br>
+
+                    <p>Here are a few project and research videos that might help you gain a better understanding of my areas of interest and
+                    expertise:</p>
+
+                    <div class="VideoCarousel">
+                        <button class="VideoCarouselButton Left">&#10094;</button>                        
+                        <div class="CarouselWindow">
+                            <div class="VideoTrack">
+                                <img class="VideoThumbnail" src="Images/catto.png" data-video-id="gAM2RqQU94g" alt="Thumbnail 1">
+                                <img class="VideoThumbnail" src="Images/wordle.png" data-video-id="OQyHEkxmvPk" alt="Thumbnail 2">
+                                <img class="VideoThumbnail" src="Images/research.png" data-video-id="qTXNMiCn_54" alt="Thumbnail 3">
+                                <img class="VideoThumbnail" src="Images/yolo.png" data-video-id="8PabPaZeN6g" alt="Thumbnail 4">
+                                <img class="VideoThumbnail" src="Images/appreward.png" data-video-id="oKZNIvtAYxw" alt="Thumbnail 5">
+                            </div>
+                        </div>
+                    
+                        <button class="VideoCarouselButton Right">&#10095;</button>
+                    </div>
 
                 </div>
 
@@ -163,7 +181,7 @@
 
                 <h1 class="white">Shvetanshu<br>Raps Gumma</h1>
                 <h2>Software Developer and ML Engineer</h2>
-                <p align="justify">Python | DJango | WebGL | OpenCV | LOVE2D<br>FPV | JS/HTML/CSS | MySQL | PyTorch | TensorFlow</p><br>
+                <p align="justify">Python | DJango | WebGL | OpenCV | LOVE2D<br>JS/HTML/CSS | MySQL | PyTorch | TensorFlow</p><br>
                 <p>Click the arrow below if the modern aesthetic <br>doesn't fancy you >:&#41;</p><br>
 
                 <div id="MandalaContainer">
@@ -230,6 +248,107 @@
         <script src="Scripts/RenderingFunctions.js"></script>
         <script src="Scripts/TerminalFunction.js"></script>
         <script src="Scripts/Main.js"></script>
+
+        <div id="VideoModal" class="Hidden">
+            <div class="VideoPlayerWrapper">
+                <div id="HoverArea"></div>
+                <button id="CloseVideo">✖</button>
+                <iframe id="YouTubePlayer" src="" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </div>
+
+        <script>
+            window.onload = function () {
+                // Video Modal Logic
+                const modal = document.getElementById('VideoModal');
+                const player = document.getElementById('YouTubePlayer');
+                const closeBtn = document.getElementById('CloseVideo');
+            
+                // Function to close the video modal
+                function closeVideoModal() {
+                    modal.classList.add('Hidden');
+                    player.src = ""; // Stop video
+                }
+            
+                // Close video modal on button click
+                closeBtn.addEventListener('click', closeVideoModal);
+            
+                // Close video modal on Escape key press
+                document.addEventListener('keydown', (event) => {
+                    if (event.key === 'Escape' && !modal.classList.contains('Hidden')) {
+                        closeVideoModal();
+                    }
+                });
+            
+                // Function to handle each video carousel separately
+                document.querySelectorAll('.VideoCarousel').forEach((carousel) => {
+                    const videoTrack = carousel.querySelector('.VideoTrack');
+                    const videoThumbnails = Array.from(carousel.querySelectorAll('.VideoThumbnail'));
+                    const videoLeftButton = carousel.querySelector('.VideoCarouselButton.Left');
+                    const videoRightButton = carousel.querySelector('.VideoCarouselButton.Right');
+                    let videoCurrentIndex = 0;
+            
+                    // Clone thumbnails for seamless loop
+                    function cloneThumbnails() {
+                        const firstClones = videoThumbnails.slice(0, 3).map(item => item.cloneNode(true));
+                        const lastClones = videoThumbnails.slice(-3).map(item => item.cloneNode(true));
+            
+                        firstClones.forEach(clone => videoTrack.appendChild(clone));
+                        lastClones.forEach(clone => videoTrack.insertBefore(clone, videoTrack.firstChild));
+                    }
+                    cloneThumbnails();
+            
+                    const videoItemWidth = videoThumbnails[0].offsetWidth + 2 * parseFloat(getComputedStyle(videoTrack).gap) || 0;
+                    const videoTotalItems = videoTrack.children.length;
+            
+                    function updateVideoCarousel() {
+                        videoTrack.style.transition = "transform 0.5s ease";
+                        const shift = -(videoItemWidth * videoCurrentIndex);
+                        videoTrack.style.transform = `translateX(${shift}px)`;
+                    }
+            
+                    function checkVideoLoop() {
+                        if (videoCurrentIndex >= videoTotalItems - 3) {
+                            videoCurrentIndex = 3;
+                            videoTrack.style.transition = "none";
+                            updateVideoCarousel();
+                        }
+                        if (videoCurrentIndex < 0) {
+                            videoCurrentIndex = videoTotalItems - 6;
+                            videoTrack.style.transition = "none";
+                            updateVideoCarousel();
+                        }
+                    }
+            
+                    videoLeftButton.addEventListener('click', () => {
+                        videoCurrentIndex--;
+                        updateVideoCarousel();
+                        setTimeout(checkVideoLoop, 500);
+                    });
+            
+                    videoRightButton.addEventListener('click', () => {
+                        videoCurrentIndex++;
+                        updateVideoCarousel();
+                        setTimeout(checkVideoLoop, 500);
+                    });
+            
+                    // Open video modal on thumbnail click
+                    videoThumbnails.forEach(thumbnail => {
+                        thumbnail.addEventListener('click', () => {
+                            const videoId = thumbnail.dataset.videoId;
+                            if (!videoId) return;
+            
+                            player.src = `https://www.youtube.com/embed/${videoId}?autoplay=1`;
+                            modal.classList.remove('Hidden');
+                        });
+                    });
+            
+                    // Initialize video carousel
+                    videoCurrentIndex = 3;
+                    updateVideoCarousel();
+                });
+            };
+            </script>
 
     </body>
 
