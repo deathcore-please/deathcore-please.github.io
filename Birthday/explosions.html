@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Q3 - Explosions</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="bg-explosions">
+  <main class="card">
+    <div class="topbar">
+      <div class="badge">Question 3/4</div>
+      <div class="progress">
+        <span class="dot on"></span><span class="dot on"></span><span class="dot on"></span><span class="dot"></span>
+      </div>
+    </div>
+
+    <h1>Follow-up 💥</h1>
+    <p>Do you like explosions?</p>
+
+    <div class="play-area">
+      <div class="btnrow">
+        <button class="btn-yes" onclick="location.href='raps.html'">YES</button>
+      </div>
+
+      <button class="btn-no" data-next="raps.html" aria-label="No">NO</button>
+
+      <div class="small">
+        Don’t worry, it’s only… a tiny explosion.
+        <br/>
+        <a href="final.html">Skip to clue 🗝️</a>
+      </div>
+    </div>
+
+    <div class="footer">
+      <span>Almost there</span>
+      <span>💣</span>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+  <script>
+    setupDodgingNoButton({ maxDodges: 10, dodgeDistance: 160 });
+  </script>
+</body>
+</html>

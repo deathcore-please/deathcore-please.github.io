@@ -1,0 +1,204 @@
+:root{
+  --bg1:#0f172a;
+  --bg2:#111827;
+  --card:#0b12205b;
+  --text:#e5e7eb;
+  --muted:#a5b4fc;
+  --accent:#22c55e;
+  --danger:#ef4444;
+  --shadow: 0 12px 30px rgba(0,0,0,.35);
+  --radius: 18px;
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  color:var(--text);
+  background: radial-gradient(1200px 800px at 20% 10%, #1d4ed8 0%, transparent 55%),
+              radial-gradient(900px 700px at 90% 40%, #7c3aed 0%, transparent 60%),
+              linear-gradient(180deg, var(--bg1), var(--bg2));
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:18px;
+}
+
+.card{
+  width:min(520px, 100%);
+  background:var(--card);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255,255,255,.08);
+  border-radius:var(--radius);
+  box-shadow:var(--shadow);
+  padding:20px 18px;
+  position:relative;
+  overflow:hidden;
+}
+
+.topbar{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:12px;
+  margin-bottom:10px;
+}
+.badge{
+  font-size:12px;
+  padding:6px 10px;
+  border-radius:999px;
+  background: rgba(255,255,255,.08);
+  border: 1px solid rgba(255,255,255,.12);
+}
+.progress{
+  display:flex; gap:6px; align-items:center;
+}
+.dot{
+  width:9px; height:9px; border-radius:50%;
+  background: rgba(255,255,255,.18);
+}
+.dot.on{ background: rgba(34,197,94,.95); }
+
+h1{
+  margin:10px 0 6px;
+  font-size: clamp(22px, 4.6vw, 30px);
+  letter-spacing:.2px;
+}
+p{
+  margin:0 0 14px;
+  line-height:1.5;
+  color: rgba(229,231,235,.9);
+}
+
+.play-area{
+  margin-top:14px;
+  border-radius: 14px;
+  border: 1px dashed rgba(255,255,255,.18);
+  padding:16px;
+  min-height: 170px;
+  position:relative;
+}
+
+.btnrow{
+  display:flex;
+  gap:10px;
+  flex-wrap:wrap;
+  margin-top:10px;
+}
+
+button, a.btn{
+  appearance:none;
+  border:none;
+  border-radius: 14px;
+  padding: 14px 16px;
+  font-size: 16px;
+  font-weight: 650;
+  cursor:pointer;
+  user-select:none;
+  -webkit-tap-highlight-color: transparent;
+  text-decoration:none;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  min-width: 130px;
+}
+
+body.bg-index{
+  background-image:
+    linear-gradient(rgba(15,23,42,.85), rgba(17,24,39,.85)),
+    url("images/lick.jpeg");
+    background-size: 100% auto;   
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+body.bg-kittens{
+  background-image:
+    linear-gradient(rgba(15,23,42,.85), rgba(17,24,39,.85)),
+    url("images/cottonsock.jpeg");
+    background-size: 100% auto;   
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+body.bg-explosions{
+  background-image:
+    linear-gradient(180deg, rgba(15,23,42,.85), rgba(17,24,39,.85)),
+    url("images/weird.jpeg");
+    
+    background-size: 100% auto;   
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+body.bg-raps{
+  background-image:
+    linear-gradient(180deg, rgba(15,23,42,.85), rgba(17,24,39,.85)),
+    url("images/us.jpeg");
+    
+    background-size: 100% auto;   
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+body.bg-final{
+  background-image:
+    linear-gradient(180deg, rgba(15,23,42,.85), rgba(17,24,39,.85)),
+    url("images/hairheart.jpeg");
+    
+    background-size: 100% auto;   
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.btn-yes{
+  background: linear-gradient(180deg, rgba(34,197,94,1), rgba(22,163,74,1));
+  color:#052e16;
+}
+.btn-no{
+  background: linear-gradient(180deg, rgba(239,68,68,1), rgba(220,38,38,1));
+  color:#3b0a0a;
+  position:absolute; /* needed for dodging */
+  left: 18px;
+  bottom: 18px;
+  min-width: 120px;
+}
+
+.small{
+  font-size: 13px;
+  color: rgba(229,231,235,.75);
+  margin-top:12px;
+}
+.small a{
+  color: var(--muted);
+}
+
+.footer{
+  margin-top:14px;
+  font-size: 12px;
+  color: rgba(229,231,235,.65);
+  display:flex;
+  justify-content:space-between;
+  gap:10px;
+  flex-wrap:wrap;
+}
+
+.confetti{
+  position:fixed;
+  inset:0;
+  pointer-events:none;
+  overflow:hidden;
+}
+.confetti span{
+  position:absolute;
+  top:-10px;
+  width:10px;
+  height:16px;
+  opacity:.9;
+  transform: rotate(12deg);
+  animation: fall 1.8s linear forwards;
+}
+@keyframes fall{
+  to{ transform: translateY(110vh) rotate(420deg); opacity: 1; }
+}

@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Q4 - Raps</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="bg-raps">
+  <main class="card">
+    <div class="topbar">
+      <div class="badge">Final Question</div>
+      <div class="progress">
+        <span class="dot on"></span><span class="dot on"></span><span class="dot"></span><span class="dot"></span>
+      </div>
+    </div>
+
+    <h1> Raps is definitely not blushing</h1>
+    <p>Do you like the person standing next to you?</p>
+
+    <div class="play-area">
+      <div class="btnrow">
+        <button class="btn-yes" onclick="location.href='final.html'">YES</button>
+      </div>
+
+      <button class="btn-no" data-next="final.html" aria-label="No">NO</button>
+
+      <div class="small">
+        (If the red button is being dramatic, that’s normal.)
+        <br/>
+        <a href="final.html">Fine, skip 😤</a>
+      </div>
+    </div>
+
+    <div class="footer">
+      <span>Last one I promise</span>
+      <span>🐾</span>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+  <script>
+    setupDodgingNoButton({ maxDodges: 10 }); // set to 999 to make NO basically impossible
+  </script>
+</body>
+</html>

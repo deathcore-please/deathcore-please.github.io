@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Q2 - Kittens</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="bg-kittens">
+  <main class="card">
+    <div class="topbar">
+      <div class="badge">Question 2/4</div>
+      <div class="progress">
+        <span class="dot on"></span><span class="dot on"></span><span class="dot"></span><span class="dot"></span>
+      </div>
+    </div>
+
+    <h1>Important question 🐱</h1>
+    <p>Do you like kittens?</p>
+
+    <div class="play-area">
+      <div class="btnrow">
+        <button class="btn-yes" onclick="location.href='explosions.html'">YES</button>
+      </div>
+
+      <button class="btn-no" data-next="explosions.html" aria-label="No">NO</button>
+
+      <div class="small">
+        (If the red button is being dramatic, that’s normal.)
+        <br/>
+        <a href="final.html">Fine, skip 😤</a>
+      </div>
+    </div>
+
+    <div class="footer">
+      <span>Thumb-friendly</span>
+      <span>🐾</span>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+  <script>
+    setupDodgingNoButton({ maxDodges: 10 }); // set to 999 to make NO basically impossible
+  </script>
+</body>
+</html>
